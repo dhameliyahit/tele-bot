@@ -14,8 +14,8 @@ function handleMessage(messageObj){
         const command = messageText.substr(1);
 
         switch(command){
+            case 'hi' : return sendMessage(messageObj,"try /hi -> for All command \n /start -> introduction \n /edu -> eduction");
             case 'start': return sendMessage(messageObj,"Hi, Hit Dhameliya This side");
-
             case 'edu': return sendMessage(messageObj,"BCA In VNSGU")
 
             default:
