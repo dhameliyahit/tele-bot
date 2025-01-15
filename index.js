@@ -4,9 +4,8 @@ const app = express();
 
 app.use(express.json());
 
-app.get("*",async(req,res)=>{
-    console.log(req.body);
-    res.send(await handler(req))
+app.get("/",async(req,res)=>{
+    res.end("<h1>Tele Bot From Hit Dhameliya</h1>")
 });
 
 app.post("*",async(req,res)=>{
