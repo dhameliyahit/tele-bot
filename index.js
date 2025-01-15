@@ -8,7 +8,7 @@ app.get("/",async(req,res)=>{
     res.end("<h1>Tele Bot From Hit Dhameliya</h1>")
 });
 
-app.post("*",async(req,res)=>{
+app.post("/",async(req,res)=>{
     console.log(req.body);
     res.send(await handler(req))
 });

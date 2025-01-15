@@ -8,14 +8,18 @@ function sendMessage(messageObj,messageText){
 }
 
 function handleMessage(messageObj){
-    const messageText = messageObj.text || '';
+    if (!messageObj || !messageObj.text) {
+        return "Invalid message or message text is empty.";
+    }
+
+    const messageText = messageObj.text.trim() || '';
 
     if(messageText.charAt(0) === '/'){
         const command = messageText.substr(1);
 
         switch(command){
-            case 'hi' : return sendMessage(messageObj,"try /hi -> for All command \n /start -> introduction \n /edu -> eduction");
-            case 'start': return sendMessage(messageObj,"Hi, Hit Dhameliya This side");
+            case 'hi' : return sendMessage(messageObj,"/hi -> for All command \n /start -> introduction \n /edu -> eduction");
+            case 'start': return sendMessage(messageObj,"Hi, Hit Dhameliya This side \n for more info text => /hi ");
             case 'edu': return sendMessage(messageObj,"BCA In VNSGU")
 
             default:
