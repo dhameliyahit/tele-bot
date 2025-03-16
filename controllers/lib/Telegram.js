@@ -22,7 +22,7 @@ function handleMessage(messageObj){
         const command = messageText.substr(1);
         let otp = OTP()
         switch(command){
-            case 'hi' : return sendMessage(messageObj,"/hi -> for All command \n /start -> introduction \n /edu -> eduction");
+            case 'hi' : return sendMessage(messageObj,"/hi -> for All command \n /start -> introduction \n /edu -> eduction \n /otp -> generate OTP");
             case 'start': return sendMessage(messageObj,"Hi, Hit Dhameliya This side \n for more info text => /hi ");
             case 'edu': return sendMessage(messageObj,"BCA In VNSGU")
             case 'otp': return sendMessage(messageObj,otp)
